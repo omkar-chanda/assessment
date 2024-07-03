@@ -15,6 +15,7 @@ class ProductsController extends Controller
     }
 
     public function product_view(Request $request, $id) {
+        /** get product by ID */
         $product = Product::find($id);
         return view('products.product_view', compact('product'));
     }
